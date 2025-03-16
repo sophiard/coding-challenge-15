@@ -45,12 +45,22 @@
     </style>
 </head>
 <body>
+    <h1>Risk Management Dashboard</h1>
     <div id="riskDashboard">
-        <h1>Risk Management Dashboard</h1>
+        <h2>Risk Entries</h2>
+        <div id="riskList"></div>
     </div>
     <form id="riskForm">
         <label for="riskName">Risk Name:</label>
         <input type="text" id="riskName" name="riskName" required>
+        <label for="riskLevel">Risk Level:</label>
+        <select id="riskLevel">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <label for="riskDepartment">Department:</label>
+        <input type="text" id="riskDepartment" name="riskDepartment" required>
         <button type="submit">Add Risk</button>
     </form>
 </body>
