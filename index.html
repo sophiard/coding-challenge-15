@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management Dashboard</title>
+    <script defer src="cc_15.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        #riskDashboard {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input, button {
+            margin: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            background: #de286b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="riskDashboard">
+        <h1>Risk Management Dashboard</h1>
+    </div>
+    <form id="riskForm">
+        <label for="riskName">Risk Name:</label>
+        <input type="text" id="riskName" name="riskName" required>
+        <button type="submit">Add Risk</button>
+    </form>
+</body>
+</html>
