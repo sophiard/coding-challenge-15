@@ -30,18 +30,22 @@ function addRiskItem(riskName, riskLevel, riskDepartment) {
         <p><strong>Level:</strong> <span class="riskLevel">${riskLevel}</span></p>
         <p><strong>Department:</strong> ${riskDepartment}</p>`;
 
-    // Task 3 - Removing Risk Items
-    const resolveButton = document.createElement("button");
-    resolveButton.textContent = "Resolve"; // Created a button
+// Task 3 - Removing Risk Items
+const resolveButton = document.createElement("button");
+resolveButton.textContent = "Resolve"; // Created a button
 
-    resolveButton.addEventListener("click", (event) => {
-        // When the button is clicked, the card is removed
-        event.stopPropagation(); // Does not affect other cards
-        riskCard.parentNode.removeChild(riskCard); // Removes the card from the dashboard
-    });
+resolveButton.addEventListener("click", (event) => {
+    // When the button is clicked, the card is removed
+    event.stopPropagation(); // Task 6 - stopPropagation 
+    riskCard.parentNode.removeChild(riskCard); // Removes the card from the dashboard
+});
 
-    riskCard.appendChild(resolveButton); // Puts the resolve button to the risk card
+riskCard.appendChild(resolveButton); // Puts the resolve button to the risk card
 
+//Task 6 - Event Propagation 
+riskCard.addEventListener("click", (event) => {
+    event.stopPropagation(); // Stops propagating 
+});
     // Task 4: Categorizing Risks by Level
     if (riskLevel === "Low") {
         riskCard.style.backgroundColor = "green"; // Low shows green
