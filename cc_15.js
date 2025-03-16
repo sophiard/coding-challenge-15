@@ -17,18 +17,19 @@ document.getElementById("riskForm").addEventListener("submit", function(event) {
     this.reset(); // Resets the form after submission
 });
 
-// Function to create and add a risk card
 function addRiskItem(riskName, riskLevel, riskDepartment) {
+    // Function to create and add a risk card
     const riskCard = document.createElement("div"); // Create a new risk card
 
     riskCard.setAttribute("class", "risk-card");
     riskCard.setAttribute("storedLevel", riskLevel); // Set stored level attribute
 
-    // Add content inside the card using an HTML template
+    
     riskCard.innerHTML = `
         <h3>${riskName}</h3>
         <p><strong>Level:</strong> <span class="riskLevel">${riskLevel}</span></p>
-        <p><strong>Department:</strong> ${riskDepartment}</p>`;
+        <p><strong>Department:</strong> ${riskDepartment}</p>`; 
+    // Adding inside card using an HTML template
 
 // Task 3 - Removing Risk Items
 const resolveButton = document.createElement("button");
